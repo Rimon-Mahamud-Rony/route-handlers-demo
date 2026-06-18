@@ -24,3 +24,14 @@ export async function PATCH(
         return new Response("Comment not found", { status: 404 });
     }
 }
+
+export async function DELETE(
+    my_request: Request,
+    { params }: {params: Promise<{ id: string }> }
+) {
+    const { id } = await params;
+    const index = comments.findIndex((c) => c.id === parseInt(id));
+    const deletedComment = comments[index];
+    comments.splice(index, 1);
+    return Response.json(deletedComment);
+}
