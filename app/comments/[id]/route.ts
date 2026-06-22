@@ -1,3 +1,4 @@
+import { NextRequest } from "next/server";
 import { comments } from "../data";
 
 export async function GET(
@@ -7,8 +8,9 @@ export async function GET(
     const { id } = await params;
     const comment = comments.find((c) => c.id === parseInt(id));
     return Response.json(comment);
-}
+} 
 
+    
 export async function PATCH(
     my_request: Request,
     { params} : {params: Promise<{id: string}>}

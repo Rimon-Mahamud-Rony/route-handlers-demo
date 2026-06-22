@@ -1,65 +1,23 @@
-import Image from "next/image";
+
+import { GrCodeSandbox } from "react-icons/gr";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-linear-to-br from-cyan-900 via-slate-400 to-cyan-900 text-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-[#F0F8FF] sm:items-start">
-        <Image
-          className=""
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left b">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black ">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-cyan-500 "
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-cyan-500 "
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="w-full flex flex-col flex-1 items-center justify-center bg-linear-to-br from-cyan-900 via-slate-400 to-cyan-900 text-black">
+      <div className="w-full flex flex-col items-center justify-center">
+        <div className="p-4 w-1/2 text-white  hover:bg-slate-400 rounded-md shadow-md shadow-green-300 border border-green-200 cursor-pointer">
+          <div className="flex flex-row justify-center px-10 gap-x-2">
+            <div>
+              <GrCodeSandbox className="h-16 w-20 text-green-800" />
+            </div>
+            <div className="flex flex-col justify-center items-center h-auto">
+              <p className="text-center text-2xl text-green-800">
+                Route Handler Demo 
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </div>
     </div>
   );
 }
