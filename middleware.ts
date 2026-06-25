@@ -17,6 +17,8 @@ export function middleware(request: NextRequest) {
 
     response.headers.set("custom-header", "custom-value");
 
+    //return response;
+
     return response;
 }
 
